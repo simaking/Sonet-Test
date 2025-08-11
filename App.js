@@ -5,9 +5,9 @@ import {
   View,
   Image,
   TouchableOpacity,
-  StatusBar,
   SafeAreaView,
 } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 const App = () => {
   const getCurrentDateTime = () => {
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#f5f3ff" />
+      <StatusBar style="dark" backgroundColor="#f5f3ff" />
       
       {/* Header with Sikt logo and menu */}
       <View style={styles.header}>

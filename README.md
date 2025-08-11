@@ -1,6 +1,34 @@
 # Sikt Student ID App
 
-A React Native clone of the Sikt student ID application, faithfully recreating the design and functionality shown in the provided screenshot.
+A React Native clone of the Sikt student ID application built with **Expo** for easy mobile testing, faithfully recreating the design and functionality shown in the provided screenshot.
+
+## 📱 Quick Start with Expo Go
+
+### For Android Testing:
+
+1. **Install Expo Go** on your Android device from Google Play Store
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+4. **Scan the QR code** with Expo Go app or your camera
+5. **The app will load automatically** on your device!
+
+### Alternative Commands:
+```bash
+# Start and open Android simulator
+npm run android
+
+# Start and open iOS simulator (macOS only)
+npm run ios
+
+# Start web version
+npm run web
+```
 
 ## Features
 
@@ -26,7 +54,7 @@ A React Native clone of the Sikt student ID application, faithfully recreating t
 ### 🔘 Interactive Buttons
 - **Kontroll Button**: Purple filled button for card verification
 - **Europeisk studentbevis**: Purple outlined button for European student card
-- Both buttons include proper touch handling and visual feedback
+- Both buttons include proper touch handling and console logging
 
 ### 📱 App Metadata
 - Dynamic timestamp: Updates automatically with current date/time
@@ -36,10 +64,10 @@ A React Native clone of the Sikt student ID application, faithfully recreating t
 ## Technical Implementation
 
 ### 🛠️ Built With
+- **Expo SDK 49**: Modern React Native development platform
 - **React Native 0.72.6**: Cross-platform mobile development
-- **TypeScript**: Type-safe development
 - **React 18.2.0**: Modern React features
-- **SafeAreaView**: Proper device compatibility
+- **Expo Status Bar**: Cross-platform status bar management
 
 ### 🎨 Design System
 - **Colors**: Carefully matched hex values from the original design
@@ -48,57 +76,58 @@ A React Native clone of the Sikt student ID application, faithfully recreating t
 - **Icons**: Emoji-based icons for cross-platform compatibility
 
 ### 📱 Platform Support
-- ✅ iOS
-- ✅ Android
+- ✅ iOS (via Expo Go)
+- ✅ Android (via Expo Go)
+- ✅ Web browser
 - ✅ Responsive design for different screen sizes
 
 ## Getting Started
 
 ### Prerequisites
 - Node.js (>= 16)
-- React Native CLI
-- Android Studio (for Android development)
-- Xcode (for iOS development)
+- Expo CLI (install with `npm install -g @expo/cli`)
+- Expo Go app on your mobile device
 
 ### Installation
 
-1. **Install dependencies**:
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd sikt-student-id
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. **For iOS** (macOS only):
-   ```bash
-   cd ios && pod install && cd ..
-   npm run ios
-   ```
-
-3. **For Android**:
-   ```bash
-   npm run android
-   ```
-
-4. **Start Metro bundler**:
+3. **Start the development server**:
    ```bash
    npm start
    ```
+
+4. **Test on your device**:
+   - Install Expo Go from your app store
+   - Scan the QR code displayed in the terminal
+   - The app loads instantly on your device!
 
 ## Project Structure
 
 ```
 sikt-student-id/
-├── App.tsx                 # Main application component
-├── index.js               # Entry point
-├── package.json           # Dependencies and scripts
-├── app.json              # App configuration
-├── metro.config.js       # Metro bundler config
-├── babel.config.js       # Babel configuration
-└── README.md             # Project documentation
+├── App.js                 # Main application component
+├── app.json              # Expo configuration
+├── package.json          # Dependencies and scripts
+├── babel.config.js       # Babel configuration for Expo
+├── assets/               # App icons and images (optional)
+├── .gitignore           # Git exclusions
+├── .watchmanconfig      # File watching configuration
+└── README.md            # Project documentation
 ```
 
 ## Key Components
 
-### MainApp Component (`App.tsx`)
+### MainApp Component (`App.js`)
 - **Header**: Sikt logo and menu button
 - **ProfileCard**: Student information display
 - **ValidityCard**: Semester and expiration info
@@ -109,7 +138,7 @@ sikt-student-id/
 
 ### 🔍 Control Button
 - Simulates card verification process
-- Logs action for debugging
+- Logs action to console for debugging
 - Ready for integration with actual verification APIs
 
 ### 🇪🇺 European Student Card Button
@@ -134,6 +163,32 @@ This implementation achieves near-pixel-perfect recreation of the original desig
 - ✅ Proper card layouts and borders
 - ✅ Matching icons and visual elements
 
+## Expo Go Benefits
+
+### 🚀 Instant Testing
+- **No Android Studio Required**: Test directly on your device
+- **Live Reloading**: See changes instantly as you code
+- **Real Device Testing**: Test on actual hardware, not just simulators
+- **Cross-Platform**: Same code runs on iOS and Android
+
+### 🔧 Easy Development
+- **Hot Reloading**: Fast development cycles
+- **Device Logs**: See console.log output in Expo DevTools
+- **Network Debugging**: Built-in network request monitoring
+- **Performance Monitoring**: Real-time performance metrics
+
+## Troubleshooting
+
+### Common Issues:
+1. **QR Code Won't Scan**: Ensure both devices are on the same WiFi network
+2. **App Won't Load**: Try running `expo r` to restart with cache cleared
+3. **Dependencies Issue**: Run `npm install` and restart the development server
+
+### Development Tips:
+- Use `console.log()` for debugging - output appears in Expo DevTools
+- Shake your device to open the developer menu
+- Use `expo start --tunnel` if you have network connectivity issues
+
 ## Future Enhancements
 
 - **Internationalization**: Multi-language support
@@ -145,8 +200,8 @@ This implementation achieves near-pixel-perfect recreation of the original desig
 
 ## Version History
 
-- **4.1.8**: Initial implementation matching original design
-- Future versions will maintain design consistency while adding features
+- **4.1.8**: Expo compatibility update - Easy mobile testing with Expo Go
+- Previous versions maintained design consistency while adding features
 
 ## License
 
