@@ -4,10 +4,8 @@
     "slug": "sikt-student-id",
     "version": "4.1.8",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#f5f3ff"
     },
@@ -19,13 +17,11 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#f5f3ff"
       },
       "package": "com.sikt.studentid"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
